@@ -28,6 +28,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
+
 .holder {
     display: flex;
     flex-direction: row;
@@ -55,7 +56,8 @@ body {
     flex-direction: column;
     width: 100%;
     height: 480px;
-    
+    justify-content: center;
+    align-items: center;
 }
 
 
