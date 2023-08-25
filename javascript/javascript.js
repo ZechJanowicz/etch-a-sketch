@@ -1,12 +1,13 @@
 console.log("Hello world")
+amountSpace = ""
 
 function addDiv() {
 var div = document.createElement('div');
-div.style.flexGrow = "1";
 div.style.background = "black";
 div.style.borderWidth = "1px";
 div.style.borderColor = "white";
 div.style.borderStyle = "solid";
+
 div.innerHTML = "&nbsp";
 
 return document.getElementById('grid').appendChild(div);
@@ -17,15 +18,22 @@ return document.getElementById('grid').appendChild(div);
 
 
 const canvasSpace = () => {
-    userInput = prompt("Enter amount: ")
-    return userInput;
+    userInput = prompt("Amount: 1 to 64: ")
+    sqrtInput = userInput * userInput;
+    return sqrtInput + userInput;
+}
+
+function gridSpace() {
+    document.getElementById('grid').style.gridTemplateColumns = `repeat(${userInput}, 1fr)`
 }
 
 function gridMod() {
     canvasSpace();
-    for (i = 0; i < userInput; i++) {
+    gridSpace();
+    for (i = 0; i < sqrtInput; i++) {
         addDiv();
     }
 }
 
 gridMod();
+
