@@ -7,7 +7,7 @@ h1 {
 }
 
 body {
-    background-color: pink;
+    background-color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -27,6 +27,7 @@ body {
 }
 
 .sizes {
+    background-color: orange;
     display: flex;
     width: 1fr;
     flex-direction: row;
@@ -59,8 +60,11 @@ body {
 #grid {
     display: grid;
     height: 680px;
-    background-color: red;
     width: 100%;
     overflow: hidden;
 }
 
+
+#grid > div >{
+    background-color: yellow;
+}
