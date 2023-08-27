@@ -13,8 +13,14 @@ newDiv.className = "divClass"
 return document.getElementById('grid').appendChild(newDiv) + newDiv;
 }
 
+let colorChoose = () => 
+ color = prompt("What is the color you'd like to use: ")
+
+
 function colorSquare() {
-    this.style.backgroundColor = "pink";
+    this.style.backgroundColor = `${color}`;
+    console.log(color)
+    return color;
 }
 
 /*64 for now*/
@@ -54,4 +60,5 @@ function gridMod() {
 
 
 gridMod();
+colorChoose();
 placeEventListenerOnTiles();
