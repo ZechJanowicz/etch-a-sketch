@@ -1,5 +1,27 @@
 console.log("Hello world")
 amountSpace = ""
+var slider = document.getElementById("sliderQuerry")
+var output = document.getElementById("sliderInfo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+
+update=()=> {
+    output.innerHTML = slider.value;
+    newSelection = parseInt(slider.value);
+    gridSelection = newSelection * newSelection;
+    
+    document.getElementById('grid').style.gridTemplateColumns = `repeat(${gridSelection}, 1fr)`
+    for (i = 0; i < gridSelection; i++) {
+        addDiv();
+    }
+    placeEventListenerOnTiles();
+}
+
+
+
 
 var addDiv = () => {
 
@@ -9,9 +31,12 @@ newDiv.style.borderColor = "white";
 newDiv.style.borderStyle = "solid";
 newDiv.innerHTML = "&nbsp";
 
+
 newDiv.className = "divClass"
 return document.getElementById('grid').appendChild(newDiv) + newDiv;
 }
+
+
 
 let colorChoose = () => 
  color = prompt("What is the color you'd like to use: ")
@@ -19,7 +44,7 @@ let colorChoose = () =>
 
 function colorSquare() {
     this.style.backgroundColor = `${color}`;
-    console.log(color)
+    console.log(color);
     return color;
 }
 
@@ -33,32 +58,24 @@ function placeEventListenerOnTiles() {
     })
 }
 
-const canvasSpace = () => {
-    userInput = prompt("Amount: 1 to 64: ")
-    sqrtInput = userInput * userInput;
-    return sqrtInput + userInput;
+function sliderUpdate() {
+    slider.addEventListener('input', update);
+    updatedSelection = parseInt(update);
 }
 
+
+
+sliderUpdate();
 
 
 function gridSpace() {
-    document.getElementById('grid').style.gridTemplateColumns = `repeat(${userInput}, 1fr)`
-    document.getElementById('grid').style.gridTemplateRows = `repeat(${userInput}, 1fr)`
 
 }
 
 
 
-function gridMod() {
-    canvasSpace();
-    gridSpace();
-    for (i = 0; i < sqrtInput; i++) {
-        addDiv();
-    }
-}
 
 
 
-gridMod();
 colorChoose();
-placeEventListenerOnTiles();
+console.log(oninput)
