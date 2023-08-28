@@ -3,7 +3,6 @@ amountSpace = ""
 var slider = document.getElementById("sliderQuerry")
 var output = document.getElementById("sliderInfo");
 output.innerHTML = slider.value;
-i = 0;
 slider.oninput = function() {
     output.innerHTML = this.value;
 }
@@ -37,7 +36,6 @@ newDiv = document.createElement('div');
 newDiv.style.borderWidth = "1px";
 newDiv.style.borderColor = "white";
 newDiv.style.borderStyle = "solid";
-newDiv.innerHTML = "&nbsp";
 
 
 newDiv.className = "divClass"
@@ -47,13 +45,11 @@ return document.getElementById('grid').appendChild(newDiv) + newDiv;
 
 function blue () {
     choice = "blue";
-    choiceBlue = true;
     console.log("hentai");
 }
 
 function red () {
     choice = "red";
-    choiceRed = true
     console.log("help")
 }
 
@@ -61,14 +57,12 @@ function red () {
 
 
 function colorSquare() {
-    if (choice === "blue" && choiceBlue == true) {
-        choiceRed = false;
+    if (choice === "blue") {
         color = "blue";
         this.style.backgroundColor = `${color}`;
 }
-    else if(choice === "red" && choiceRed == true) {
+    else if(choice === "red") {
         color = "red";
-        choiceBlue = false
         this.style.backgroundColor = `${color}`;
     }
 }
