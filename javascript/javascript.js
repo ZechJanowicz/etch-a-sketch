@@ -11,9 +11,10 @@ slider.oninput = function() {
 update=()=> {
     output.innerHTML = slider.value;
     newSelection = parseInt(slider.value);
-    gridSelection = newSelection * newSelection;
+    gridSelection = newSelection * newSelection
     
-    document.getElementById('grid').style.gridTemplateColumns = `repeat(${gridSelection}, 1fr)`
+    document.getElementById('grid').style.gridTemplateColumns = `repeat(${newSelection}, 1fr)`
+    document.getElementById('grid').style.gridTemplateRows = `repeat(${newSelection}, 1fr)`
     for (i = 0; i < gridSelection; i++) {
         addDiv();
     }
