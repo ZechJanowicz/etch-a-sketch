@@ -9,20 +9,20 @@
         <h1>Etch a sketch!</h1>
         <div id="CARD-BOX">
             <div class='sizes'>
-                <input class="sliderRange" id="sliderQuerry" type="range" min="1" max="64" value="10">
-                <p>Value: <span class="sliderValue" id="sliderInfo"></span></p>
+                <input class="sliderRange" id="sliderQuerry" type="range" min="1" max="64" value="0">
+                <p>Grid Space: <span class="sliderValue" id="sliderInfo"></span></p>
             </div>
 
             
             <div class="holder">
                 <div class="colors">
-                    <div class="color-buttons">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
+                    <div ID="color-buttons">
+                            <button onclick = blue()>1</button>
+                            <button onclick = red()>2</button>
+                            <button>3</button>
+                            <button>4</button>
+                            <button>5</button>
+                            <button>6</button>
                     </div> 
                 </div>
                 <div id="grid">

@@ -58,10 +58,14 @@ input {
     height: 652px;
 }
 
-.color-buttons {
+#color-buttons {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    justify-content: space-evenly;
+}
+#color-buttons > button {
+    width: 30px;
+    height: 30px;
 }
 
 
