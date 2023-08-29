@@ -1,5 +1,3 @@
-console.log("Hello world")
-amountSpace = ""
 var slider = document.getElementById("sliderQuerry")
 var output = document.getElementById("sliderInfo");
 output.innerHTML = slider.value;
@@ -45,14 +43,38 @@ return document.getElementById('grid').appendChild(newDiv) + newDiv;
 
 function blue () {
     choice = "blue";
-    console.log("hentai");
 }
 
 function red () {
     choice = "red";
-    console.log("help")
 }
 
+function green() {
+    choice = "green";
+}
+
+function purple() {
+    choice = "purple";
+}
+
+function yellow() {
+    choice = "yellow";
+}
+
+function black() {
+    choice = "black";
+}
+
+function white() {
+    choice = "white";
+}  
+
+function random () {
+    x = (Math.floor(Math.random() * 1001) +1);
+    y = (Math.floor(Math.random() * 1001) +1);
+    z = (Math.floor(Math.random() * 1001) +1);
+    choice = "random";
+}
 
 
 
@@ -63,6 +85,35 @@ function colorSquare() {
 }
     else if(choice === "red") {
         color = "red";
+        this.style.backgroundColor = `${color}`;
+    }
+    else if (choice === "green") {
+        color = "green";
+        this.style.backgroundColor = `${color}`;
+    }
+    else if (choice === "purple") {
+        color = "purple";
+        this.style.backgroundColor = `${color}`;
+    }
+    else if (choice === "yellow") {
+        color = "yellow";
+        this.style.backgroundColor = `${color}`;
+    }
+    else if (choice === "black") {
+        color = "black";
+        this.style.backgroundColor = `${color}`;
+    }
+    else if (choice === "white") {
+        color = "white";
+        this.style.backgroundColor = `${color}`;
+    }
+    else if (choice === "random") {
+        color = `${x}, ${y}, ${z}`;
+        this.style.backgroundColor = `rgb(${color})`
+        random();
+    }
+    else {
+        color = "white";
         this.style.backgroundColor = `${color}`;
     }
 }
@@ -85,4 +136,3 @@ function sliderUpdate() {
 
 
 sliderUpdate();
-console.log(oninput)
